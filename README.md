@@ -17,18 +17,73 @@ Oil production forecasting is crucial for reservoir management, production plann
 ## 2. Methodology
 
 ### 2.1 Dataset Description
-We generated a synthetic dataset simulating 7 years of daily oil well production data with the following features:
-- Date (daily timestamps)
-- Oil rate (bbl/day)
-- Water cut (%)
-- Gas rate (Mscf/day)
-- Tubing pressure (psi)
-- Casing pressure (psi)
-- Choke size (inches)
 
-The dataset was split into:
-- Training set: Years 1-6
-- Test set: Year 7
+#### 2.1.1 Synthetic Dataset Generation
+We generated a comprehensive synthetic dataset simulating 7 years (2,555 days) of daily oil well production data, starting from January 1, 2017. The dataset was carefully designed to mimic real-world oil well behavior, incorporating:
+
+- **Base Parameters**:
+  - Initial oil rate: 1,200 bbl/day
+  - Initial water cut: 25%
+  - Initial gas rate: 600 Mscf/day
+  - Initial tubing pressure: 2,200 psi
+  - Initial casing pressure: 2,700 psi
+  - Initial choke size: 32/64 inch
+
+- **Temporal Characteristics**:
+  - Daily measurements
+  - 7-year period (2,555 days)
+  - Seasonal variations
+  - Long-term decline trends
+  - Random noise components
+
+- **Key Features**:
+  1. **Oil Rate (bbl/day)**
+     - Exponential decline (rate: 0.0003/day)
+     - Seasonal variations (±75 bbl/day)
+     - Random noise (±25 bbl/day)
+  
+  2. **Water Cut (%)**
+     - Gradual increase (0.008%/day)
+     - Random variations (±2%)
+     - Capped at 95%
+  
+  3. **Gas Rate (Mscf/day)**
+     - Correlated with oil rate (0.5 ratio)
+     - Random variations (±60 Mscf/day)
+  
+  4. **Pressures (psi)**
+     - Tubing Pressure: Gradual decline with seasonal variations
+     - Casing Pressure: Similar pattern with higher base value
+     - Both include random fluctuations
+  
+  5. **Choke Size (1/64 inch)**
+     - Discrete values: 24, 28, 32, 36, 40, 44, 48
+     - Occasional step changes (20 changes over 7 years)
+
+#### 2.1.2 Dataset Statistics
+- **Total Records**: 2,555 daily measurements
+- **Time Period**: 2017-01-01 to 2023-12-31
+- **Training Set**: Years 1-6 (2,190 days)
+- **Test Set**: Year 7 (365 days)
+- **Missing Values**: None (synthetic data)
+- **Data Quality**: Clean, consistent, and well-structured
+
+#### 2.1.3 Data Characteristics
+- **Trends**:
+  - Oil rate shows exponential decline
+  - Water cut shows gradual increase
+  - Pressures show seasonal patterns
+  - Gas rate follows oil rate with correlation
+
+- **Seasonality**:
+  - Annual cycles in production rates
+  - Semi-annual cycles in pressure measurements
+  - Seasonal variations in well performance
+
+- **Correlations**:
+  - Strong correlation between oil and gas rates
+  - Moderate correlation between pressures
+  - Inverse correlation between oil rate and water cut
 
 ### 2.2 Models Implemented
 
@@ -94,7 +149,7 @@ The following visualizations provide insights into the dataset characteristics:
 1. **Production Trends**
    ![Oil Rate Trend](data/plots/oil_rate_trend.png)
    - Daily oil production rate over time
-   - Shows clear seasonal patterns and long-term decline
+   - Clear seasonal patterns and long-term decline
    - Identifies potential production anomalies
 
 2. **Water Cut Analysis**
