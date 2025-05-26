@@ -147,31 +147,31 @@ We generated a comprehensive synthetic dataset simulating 7 years (2,555 days) o
 The following visualizations provide insights into the dataset characteristics:
 
 1. **Production Trends**
-   ![Oil Rate Trend](data/plots/oil_rate_trend.png)
+   ![Oil Rate Trend](figures/oil_rate_trend.png)
    - Daily oil production rate over time
    - Clear seasonal patterns and long-term decline
    - Identifies potential production anomalies
 
 2. **Water Cut Analysis**
-   ![Water Cut Trend](data/plots/water_cut_trend.png)
+   ![Water Cut Trend](figures/water_cut_trend.png)
    - Water cut percentage evolution
    - Indicates reservoir behavior and potential water breakthrough
    - Correlates with production decline
 
 3. **Pressure Analysis**
-   ![Pressure Trends](data/plots/pressure_trends.png)
+   ![Pressure Trends](figures/pressure_trends.png)
    - Tubing and casing pressure trends
    - Shows well performance and potential operational issues
    - Important for production optimization
 
 4. **Gas-Oil Correlation**
-   ![Gas-Oil Correlation](data/plots/oil_gas_correlation.png)
+   ![Gas-Oil Correlation](figures/oil_gas_correlation.png)
    - Relationship between gas and oil production
    - Helps understand reservoir fluid behavior
    - Important for production allocation
 
 5. **Feature Correlations**
-   ![Correlation Matrix](data/plots/correlation_matrix.png)
+   ![Correlation Matrix](figures/correlation_matrix.png)
    - Correlation matrix of all features
    - Identifies key relationships between variables
    - Guides feature selection for models
@@ -179,19 +179,19 @@ The following visualizations provide insights into the dataset characteristics:
 #### 3.3.2 Model Performance Visualization
 
 1. **Model Comparison**
-   ![Model Comparison](data/plots/model_comparison.png)
+   ![Model Comparison](figures/model_comparison.png)
    - Side-by-side comparison of all models
    - Visual representation of prediction accuracy
    - Highlights Prophet's superior performance
 
 2. **Actual vs Predicted**
-   ![Actual vs Predicted](data/plots/comparaison_reel_vs_pred_7e_annee.png)
+   ![Actual vs Predicted](figures/comparaison_reel_vs_pred_7e_annee.png)
    - Detailed comparison of actual vs predicted values
    - Shows model performance on test data
    - Illustrates prediction accuracy and error patterns
 
 3. **Long-term Forecast (5 Years):**
-   - The long-term oil production forecast (5 years) is performed exclusively using the Prophet model, which is particularly suited for time series with strong seasonality and trend changes. The resulting forecast includes confidence intervals and is visualized in the file `data/plots/projection_5_ans.png`.
+   - The long-term oil production forecast (5 years) is performed exclusively using the Prophet model, which is particularly suited for time series with strong seasonality and trend changes. The resulting forecast includes confidence intervals and is visualized in the file `figures/projection_5_ans.png`.
    - Other models (Linear Regression, Random Forest, XGBoost, ARIMA, LSTM, Holt-Winters) are compared for short-term (year 7) performance, but only Prophet is used for the extended forecast due to its superior results and interpretability for this use case.
 
 ### 3.4 Key Visual Insights
