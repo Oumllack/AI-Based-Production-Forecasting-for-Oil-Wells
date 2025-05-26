@@ -190,11 +190,9 @@ The following visualizations provide insights into the dataset characteristics:
    - Shows model performance on test data
    - Illustrates prediction accuracy and error patterns
 
-3. **Long-term Forecast**
-   ![Long-term Forecast](data/plots/projection_5_ans.png)
-   - 5-year production forecast
-   - Includes confidence intervals
-   - Demonstrates model's long-term prediction capability
+3. **Long-term Forecast (5 Years):**
+   - The long-term oil production forecast (5 years) is performed exclusively using the Prophet model, which is particularly suited for time series with strong seasonality and trend changes. The resulting forecast includes confidence intervals and is visualized in the file `data/plots/projection_5_ans.png`.
+   - Other models (Linear Regression, Random Forest, XGBoost, ARIMA, LSTM, Holt-Winters) are compared for short-term (year 7) performance, but only Prophet is used for the extended forecast due to its superior results and interpretability for this use case.
 
 ### 3.4 Key Visual Insights
 
