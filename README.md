@@ -91,44 +91,52 @@ The dataset was split into:
 #### 3.3.1 Data Exploration
 The following visualizations provide insights into the dataset characteristics:
 
-1. **Production Trends** (`data/plots/oil_rate_trend.png`)
+1. **Production Trends**
+   ![Oil Rate Trend](data/plots/oil_rate_trend.png)
    - Daily oil production rate over time
    - Shows clear seasonal patterns and long-term decline
    - Identifies potential production anomalies
 
-2. **Water Cut Analysis** (`data/plots/water_cut_trend.png`)
+2. **Water Cut Analysis**
+   ![Water Cut Trend](data/plots/water_cut_trend.png)
    - Water cut percentage evolution
    - Indicates reservoir behavior and potential water breakthrough
    - Correlates with production decline
 
-3. **Pressure Analysis** (`data/plots/pressure_trends.png`)
+3. **Pressure Analysis**
+   ![Pressure Trends](data/plots/pressure_trends.png)
    - Tubing and casing pressure trends
    - Shows well performance and potential operational issues
    - Important for production optimization
 
-4. **Gas-Oil Correlation** (`data/plots/oil_gas_correlation.png`)
+4. **Gas-Oil Correlation**
+   ![Gas-Oil Correlation](data/plots/oil_gas_correlation.png)
    - Relationship between gas and oil production
    - Helps understand reservoir fluid behavior
    - Important for production allocation
 
-5. **Feature Correlations** (`data/plots/correlation_matrix.png`)
+5. **Feature Correlations**
+   ![Correlation Matrix](data/plots/correlation_matrix.png)
    - Correlation matrix of all features
    - Identifies key relationships between variables
    - Guides feature selection for models
 
 #### 3.3.2 Model Performance Visualization
 
-1. **Model Comparison** (`data/plots/model_comparison.png`)
+1. **Model Comparison**
+   ![Model Comparison](data/plots/model_comparison.png)
    - Side-by-side comparison of all models
    - Visual representation of prediction accuracy
    - Highlights Prophet's superior performance
 
-2. **Actual vs Predicted** (`data/plots/comparaison_reel_vs_pred_7e_annee.png`)
+2. **Actual vs Predicted**
+   ![Actual vs Predicted](data/plots/comparaison_reel_vs_pred_7e_annee.png)
    - Detailed comparison of actual vs predicted values
    - Shows model performance on test data
    - Illustrates prediction accuracy and error patterns
 
-3. **Long-term Forecast** (`data/plots/projection_5_ans.png`)
+3. **Long-term Forecast**
+   ![Long-term Forecast](data/plots/projection_5_ans.png)
    - 5-year production forecast
    - Includes confidence intervals
    - Demonstrates model's long-term prediction capability
@@ -138,7 +146,7 @@ The following visualizations provide insights into the dataset characteristics:
 1. **Seasonal Patterns**
    - Clear seasonal variations in production rates
    - Prophet model effectively captures these patterns
-   - Traditional models struggle with seasonal components
+   - Traditional models struggled with seasonal components
 
 2. **Production Decline**
    - Gradual decline in production rates
