@@ -321,7 +321,10 @@ python src/models/oil_rate_prediction.py --generate-plots
 3. Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. KDD 2016.
 
 ## 9. Contact
-For questions and collaborations, please contact [Your Contact Information]
+For questions and collaborations, please contact:
+- Name: Oumllack
+- Email: c_fannyoumar@gmail.com
+- GitHub: [Oumllack](https://github.com/Oumllack)
 
 ## 10. License
 This project is licensed under the MIT License - see the LICENSE file for details. 
